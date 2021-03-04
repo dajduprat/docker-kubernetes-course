@@ -40,6 +40,6 @@ jobs:
         # Azure credentials i.e. output of `az ad sp create-for-rbac --sdk-auth`
         creds: ${{ AZURE_CREDENTIALS }} # default is 
         # Resource Group Name
-        resource-group: # optional, default is 
+        resource-group: refinitiv-rg # optional, default is 
         # AKS Cluster Name
-        cluster-name: # optional, default is 
+        cluster-name: refinitiv-aks # optional, default is 
