@@ -10,8 +10,11 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  IMAGE_TAG:${{ github.run_number }}
+
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  #workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,3 +31,24 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: docker build ./app-dotnet --file ./app-dotnet/Dockerfile --tag webapp:$(date +%s)
+      
+      - name: Tag docker image
+        run: docker tag webapp:$IMAGE_TAG dajduprat/webapp:$IMAGE_TAG
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
